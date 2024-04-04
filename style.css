@@ -1,0 +1,411 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Bebas Neue', sans-serif;
+    font-family: 'Rubik', sans-serif;
+}
+.backImg{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    background: url('./assets/netflix-bg-img.jpg');
+    /* filter: brightness(40%); */
+    position: relative;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+}
+.netflixLogo{
+    position: absolute;
+    left: 80px;
+    top: 10px;
+}
+.netflixLogo img{
+    height: 80px;
+    cursor: pointer;
+    
+}
+.backImg::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Adjust the background color and opacity as needed */
+    filter: brightness(40%);
+}
+.loginForm{
+  
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    height: 700px;
+    width: 450px;
+    border-radius: 3px;
+    background: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(1.2px);
+    padding: 40px 60px;
+    margin-top: 100px;
+    margin-bottom: 70px;
+    
+}
+.loginForm h2{
+    color: #FFFFFF;
+    font-size: 32px;
+    font-weight: 500;
+    text-align: start;
+    width: 100%;
+    margin-top: 10px;
+}
+form{
+    margin-top: 30px;
+    height: 400px;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    width: 100%;
+}
+input{
+    height: 55px;
+    outline: none;
+    border: none;
+    background-color: transparent;
+    color: #FFFFFF;
+    border: 1.5px solid #60605F;
+    border-radius: 4px;
+    margin-bottom: 10px;
+    padding-left: 10px;
+    font-size: 18px;
+    
+}
+input::placeholder{
+    color: #AEBAB9;
+    font-size: 16px;
+}
+input:focus{
+    outline: 2px solid #ffff;
+    outline-offset: 2px;
+}
+.loginBtn{
+    background-color: #E50914;
+    color: #ffff;
+    border: none;
+    border-radius: 4px;
+    height: 40px;
+    font-size: 15px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+.loginBtn:hover{
+    opacity: 0.9;
+}
+.or{
+    color: #B5B4B4;
+    font-size: 17px;
+    font-weight: 300;
+    text-align: center;
+}
+.signCode{
+    border: none;
+    height: 40px;
+    font-size: 15px;
+    font-weight: 500;
+    cursor: pointer;
+    border-radius: 4px;
+    background: rgba(128, 122, 121, 0.4);
+    color: #FFFFFF;
+}
+.forgot{
+    color: #f0f0f0;
+    font-size: 16px;
+    text-decoration: none;
+    text-align: center;
+}
+/* .checkbox{
+    color: #f0f0f0;
+    font-size: 14px;
+} */
+/* .checkbox input{
+    height: 20px;
+} */
+/****/
+
+.checkbox-wrapper-4{
+    margin-top: 25px;
+}
+
+  .checkbox-wrapper-4 * {
+    box-sizing: border-box;
+  }
+  .checkbox-wrapper-4 .cbx {
+    -webkit-user-select: none;
+    user-select: none;
+    cursor: pointer;
+    padding: 6px 8px;
+    /* border-radius: 1px; */
+    overflow: hidden;
+    transition: all 0.2s ease;
+    display: inline-block;
+  }
+  .checkbox-wrapper-4 .cbx:not(:last-child) {
+    margin-right: 6px;
+  }
+  .checkbox-wrapper-4 .cbx:hover {
+    background: transparent;
+  }
+  .checkbox-wrapper-4 .cbx span {
+    float: left;
+    vertical-align: middle;
+    transform: translate3d(0, 0, 0);
+  }
+  .checkbox-wrapper-4 .cbx span:first-child {
+    position: relative;
+    width: 18px;
+    height: 18px;
+    border-radius: 4px;
+    transform: scale(1);
+    border: 1px solid #60605F;
+    transition: all 0.2s ease;
+    box-shadow: 0 1px 1px rgba(0,16,75,0.05);
+  }
+  .checkbox-wrapper-4 .cbx span:first-child svg {
+    position: absolute;
+    top: 3px;
+    left: 2px;
+    fill: none;
+    stroke: #000;
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-dasharray: 16px;
+    stroke-dashoffset: 16px;
+    transition: all 0.3s ease;
+    transition-delay: 0.1s;
+    transform: translate3d(0, 0, 0);
+  }
+  .checkbox-wrapper-4 .cbx span:last-child {
+    padding-left: 8px;
+    line-height: 18px;
+  }
+  .checkbox-wrapper-4 .cbx:hover span:first-child {
+    border-color: #fff;
+  }
+  .checkbox-wrapper-4 .inp-cbx {
+    position: absolute;
+    visibility: hidden;
+  }
+  .checkbox-wrapper-4 .inp-cbx:checked + .cbx span:first-child {
+    background: #BAB7B6;
+    border-color: #BAB7B6;
+    animation: wave-4 0.4s ease;
+  }
+  .checkbox-wrapper-4 .inp-cbx:checked + .cbx span:first-child svg {
+    stroke-dashoffset: 0;
+  }
+  .checkbox-wrapper-4 .inline-svg {
+    position: absolute;
+    width: 0;
+    height: 0;
+    pointer-events: none;
+    user-select: none;
+  }
+  @media screen and (max-width: 640px) {
+    .checkbox-wrapper-4 .cbx {
+      width: 100%;
+      display: inline-block;
+    }
+  }
+  @-moz-keyframes wave-4 {
+    50% {
+      transform: scale(0.9);
+    }
+  }
+  @-webkit-keyframes wave-4 {
+    50% {
+      transform: scale(0.9);
+    }
+  }
+  @-o-keyframes wave-4 {
+    50% {
+      transform: scale(0.9);
+    }
+  }
+  @keyframes wave-4 {
+    50% {
+      transform: scale(0.9);
+    }
+  }
+
+
+/****/
+.signUpBox{
+    margin-top: 25px;
+    width: 320px;
+    display: flex;
+    align-items: start;
+}
+.signUpBox p{
+  color: #60605F;
+  margin-right: 5px;
+}
+.signUpBox a{
+    color: #f0f0f0;
+    text-decoration: none;
+}
+.signUpBox a:hover{
+    text-decoration: underline;
+}
+.captchaBox{
+    margin-top: 25px;
+    font-size: 13px;
+    color: #60605F;
+}
+.captchaBox a{
+    text-decoration: none;
+    color: #0071EB;
+    font-size: 12px;
+}
+.captchaBox a:hover{
+    text-decoration: underline;
+}
+footer{
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+  flex-direction: row;
+  height: 370px;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(1.2px);
+  padding: 0px 40px;
+  padding-right: 60px;
+}
+.options{
+  position: relative;
+}
+footer div{
+  display: flex;
+flex-direction: column;
+width: 200px;
+}
+select{
+  text-align: center;
+  appearance: none;
+  height: 32px;
+  outline: none;
+  border: none;
+  background-color: transparent;
+  color: #FFFFFF;
+  border: 1.5px solid #60605F;
+  color: #fff;
+  font-size: 14px;
+  border-radius: 4px;
+  width: 120px;
+  margin-bottom: 30px;
+ 
+}
+.fa-caret-down{
+  left: 100px;
+  top: 10px;
+  position: absolute;
+  font-size: 12px;
+  color: #ffff;
+}
+.fa-globe{
+  top: 7px;
+  left: 8px;
+  position: absolute;
+  font-size: 18px;
+  color: #ffff;
+}
+select:focus{
+  outline: 2px solid #ffff;
+  outline-offset: 2px;
+}
+.footerLinks{
+  font-size: 14px;
+  color: #ffffffb3;
+  font-weight: 300;
+  margin-bottom: 30px;
+}
+.hr{
+  width: 100%;
+  height: 1.50px;
+  background-color: #60605F;
+  display: none;
+}
+.para{
+  margin-bottom: 30px; width: 250px;
+}
+/**Media queries**/
+@media(max-width:960px){
+    .netflixLogo{
+        left: 20px;
+    }
+    .netflixLogo img{
+        height: 50px;
+    }
+    
+}
+@media(max-width:900px){
+  footer{
+    flex-wrap: nowrap;
+    padding: 0px 20px;
+  }
+}
+@media(max-width:599px){
+  .backImg{
+    background: #000;
+  }
+  .loginForm{
+    width: 100%;
+    padding: 0px 30px;
+    height: 600px;
+    margin-bottom: 10px;
+  }
+  .loginForm h2{
+ 
+   margin-bottom: 5px;
+   margin-top: 0px;
+}
+.signUpBox{
+  margin-top: 0px;
+  margin-left: 10px;
+  width: 100%;
+}
+.captchaBox{
+  margin-top: 11px;
+  margin-left: 10px;
+  width: 100%;
+}
+.hr{
+  display: block;
+}
+footer{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+footer div{
+  width: 150px;
+}
+.footerLinks{
+  margin-bottom: 10px;
+  margin-right: 10px;
+}
+select{
+  margin-bottom: 10px;
+}
+.para{
+  margin-bottom: 10px;
+}
+}
